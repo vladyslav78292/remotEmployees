@@ -1,0 +1,47 @@
+@import '../../utils/variables.scss';
+
+.card {
+  &__element {
+    background-color: $white-c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+
+  &__image {
+    position: relative;
+    top: 10px;
+    margin: 0 -12px;
+
+    &--home {
+      margin: 24px;
+      margin-right: 16px;
+      position: relative;
+      top: 0px;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-right: 24px;
+  }
+
+  &__text-top {
+    color: $dark-blue-c;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__text-bottom {
+    color: $light-blue-c;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

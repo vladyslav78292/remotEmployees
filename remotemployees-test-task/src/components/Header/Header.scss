@@ -1,0 +1,97 @@
+@import '../../utils/variables.scss';
+
+.header {
+  position: absolute;
+  &__container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 56px;
+    justify-content: center;
+  }
+
+  &-menu {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__logo {
+    &--image {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &--text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: $dark-blue-c;
+    }
+  }
+}
+
+.nav {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: 24px;
+
+    &-element {
+      border-radius: 50px;
+      padding: 8px 16px;
+      background-color: $white-background;
+      border: 1px solid $white-c;
+
+      &--burger-menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+
+    &--burger-menu-arrow {
+      margin-left: 14px;
+    }
+
+    &-link {
+      color: $white-c;
+    }
+  }
+
+  &__autorization {
+    padding: 12px 24px;
+    border-radius: 50px;
+    line-height: 22px;
+    background-color: $light-green-background;
+
+    &-link {
+      color: $dark-green-c;
+    }
+  }
+}

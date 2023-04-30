@@ -1,0 +1,11 @@
+@import '../../utils/variables.scss';
+
+.swiper {
+  position: relative;
+  bottom: 168px;
+  right: 552px;
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+  width: 10000px;
+}
