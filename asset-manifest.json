@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/remotEmployees/static/css/main.1147c0df.css",
+    "main.js": "/remotEmployees/static/js/main.28319cca.js",
+    "static/js/787.71210b13.chunk.js": "/remotEmployees/static/js/787.71210b13.chunk.js",
+    "static/media/heroSection_image.png": "/remotEmployees/static/media/heroSection_image.5e6f3223045f6d287131.png",
+    "static/media/3people.svg": "/remotEmployees/static/media/3people.606532513e4f23e7029b470ff4d4acf5.svg",
+    "static/media/tripadvisor.svg": "/remotEmployees/static/media/tripadvisor.141a1ef37bf1ba5927f8337a15045019.svg",
+    "static/media/airbnb.svg": "/remotEmployees/static/media/airbnb.3c775caf0d31ed76e275fc28806012cc.svg",
+    "static/media/tiket.svg": "/remotEmployees/static/media/tiket.928ad729a72187e835895286a7019fb1.svg",
+    "static/media/traveloka.svg": "/remotEmployees/static/media/traveloka.e6fdbbb65817e4ce3018b669af7bb70b.svg",
+    "static/media/woman.png": "/remotEmployees/static/media/woman.8097c66fa42499931ee1.png",
+    "static/media/arrow-right.svg": "/remotEmployees/static/media/arrow-right.9d73b42be1da82310877ad6881ebd526.svg",
+    "static/media/arrow-bottom.svg": "/remotEmployees/static/media/arrow-bottom.ce0b8f41e82bae0a0994d03482003730.svg",
+    "static/media/location.svg": "/remotEmployees/static/media/location.acbb64d65609815f40f3b0f7327bf17d.svg",
+    "index.html": "/remotEmployees/index.html",
+    "static/media/logo_remotemployees.svg": "/remotEmployees/static/media/logo_remotemployees.81040439079c64f5fa5c1905ac18f708.svg",
+    "main.1147c0df.css.map": "/remotEmployees/static/css/main.1147c0df.css.map",
+    "main.28319cca.js.map": "/remotEmployees/static/js/main.28319cca.js.map",
+    "787.71210b13.chunk.js.map": "/remotEmployees/static/js/787.71210b13.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1147c0df.css",
+    "static/js/main.28319cca.js"
+  ]
+}
