@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { MainPage } from './pages/MainPage';
 import './styles/globalStyles.scss';
 

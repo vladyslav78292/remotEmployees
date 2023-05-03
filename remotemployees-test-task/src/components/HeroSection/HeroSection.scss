@@ -42,6 +42,7 @@
       outline: 0;
       background-color: $green-for-buttons-c;
       border-radius: 50px;
+      cursor: pointer;
     }
 
     &::placeholder {
@@ -55,7 +56,6 @@
     border: 1px solid $gray-border-c;
     display: flex;
     padding: 0;
-    cursor: pointer;
     outline: none;
     border-radius: 50px;
     margin-top: 32px;
@@ -115,9 +115,6 @@
   width: 750px;
   position: absolute;
   z-index: -1;
-  height: 724px;
-  background-image: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
-  position: absolute;
-  bottom: 600px;
-  right: 920px;
+  height: 424px;
+  background-image: linear-gradient(to bottom right, rgba(130, 187, 255, 0.2) 20%, white 60%);
 }

@@ -1,0 +1,99 @@
+@import '../../utils/variables.scss';
+
+.slide {
+  &__main {
+    border-radius: 8px;
+    margin: 0 56px;
+    width: 740px;
+    height: 400px;
+  }
+
+  &__modal {
+    width: 612px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-c;
+    gap: 24px;
+    position: relative;
+    bottom: 143px;
+    left: 120px;
+    margin-bottom: -105px;
+    border-radius: 16px;
+  }
+
+  &__info {
+    display: flex;
+    width: 612px;
+    flex-direction: column;
+  }
+
+  &__header {
+    color: $dark-blue-c;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 32px 32px 0;
+    text-transform: capitalize;
+  }
+
+  &__paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 16px 32px 0;
+    color: $gray-c;
+  }
+
+  &__feedback {
+    margin: 0 32px;
+  }
+
+  &__person-info {
+    display: flex;
+    gap: 4px;
+    margin-left: 24px;
+    flex-direction: column;
+  }
+
+  &__person-name {
+    color: $building-title-c;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__person-position {
+    color: $partherships-c;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__person-container {
+    justify-content: space-between;
+    display: flex;
+    
+  }
+
+  &__person {
+    display: flex;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__rating-number {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: $dark-blue-button-c;
+  }
+}
+
+.Esther {
+  position: relative;
+  bottom: 20px;
+}

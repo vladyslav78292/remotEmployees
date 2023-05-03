@@ -1,7 +1,7 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import './HeroSection.scss';
 import '../../styles/grid.scss';
+import './HeroSection.scss'
 import heroImage from '../../images/heroSection_image.png';
+import { HeroSectionSwiper } from '../HeroSectionSwiper';
 import tripadvisor from '../../images/tripadvisor.svg';
 import airbnb from '../../images/airbnb.svg';
 import traveloka from '../../images/traveloka.svg'
@@ -9,7 +9,6 @@ import tiket from '../../images/tiket.svg'
 import location from '../../images/location.svg';
 import arrowRight from '../../images/arrow-right.svg';
 import { useState } from 'react';
-import { HeroSectionSwiper } from '../HeroSectionSwiper';
 
 export const HeroSection = () => {
   const [query, setQuery] = useState('');
@@ -22,8 +21,7 @@ export const HeroSection = () => {
   return (
     <section className='hero-section grid'>
       <div className='background_gradient'></div>
-
-      <div className='grid__item--desktop-4-36 hero-section__container'>
+      <div className='hero-section__container grid__item--desktop-4-36'>
         <div className='hero-section__info'>
           <h1 className='hero-section__title'>
             Find the place to <br></br> live <h1 className='hero-section__title hero-section__title--transparent'>Your dreams</h1> <br></br> easily here
@@ -33,7 +31,7 @@ export const HeroSection = () => {
             <img 
               src={location} 
               className='hero-section__location-img'
-              alt='location image'
+              alt='location'
             />
             <form className='hero-section__form' onSubmit={(event) => handleSubmit(event)}>
               <input

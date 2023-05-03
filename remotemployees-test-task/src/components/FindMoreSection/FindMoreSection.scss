@@ -1,0 +1,189 @@
+@import '../../utils/variables.scss';
+
+.find-more {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  &__image {
+    height: 2px;
+    width: 32px;
+  }
+
+  &__header {
+    margin-top: -12px;
+  }
+
+  &__owner-image {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__pre-title {
+    margin-top: 8px;
+    color: $yellow-c;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: capitalize;
+  }
+
+  &__container {
+    margin-top: 40px;
+  }
+
+  &__title {
+    margin-top: 12px;
+    color: $dark-blue-c;
+    font-weight: 600;
+    font-size: 32px;
+    text-transform: capitalize;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 12px 16px;
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: $white-c;
+    background-color: $green-for-buttons-c;
+    border-radius: 32px;
+  }
+
+  &__small-house-image {
+    width: 200px;
+    @media (max-width: 1360px) {
+      width: 175px;  
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__house-owner {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__small-article {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__small-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  &__owner-name {
+    color: $dark-blue-button-c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  &__house-title {
+    text-align: start;
+    color: $dark-blue-c;
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  &__date-info {
+    color: $partherships-c;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 16px;
+    gap: 14px;
+  }
+
+  &__house-info {
+    width: 330px;
+    @media (max-width: 1360px) {
+      width: 300px;  
+    }
+  }
+
+  &__big-article {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__big-house-owner {
+    display: flex;
+    gap: 16px;
+    height: 32px;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__big-house-title {
+    color: $dark-blue-c;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 12px;
+  }
+
+  &__big-house-paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    color: $gray-c;
+    margin-top: 12px;
+    text-align: start;
+    line-height: 24px;
+    width: 560px;
+
+    @media (max-width: 1360px) {
+      width: 480px;  
+    }
+  }
+
+  &__big-house {
+    width: 560px;
+    @media (max-width: 1360px) {
+      width: 480px;  
+    }
+  }
+}
+
+.gradient {
+  &__blue {
+    width: 638px;
+    position: absolute;
+    z-index: -1;
+    bottom: 210px;
+    left: -200px;
+    height: 694px;
+    background: radial-gradient(circle at center, rgba(130, 255, 232, 0.5), white 60%);
+  }
+
+  &__green {
+    width: 638px;
+    position: absolute;
+    z-index: -1;
+    bottom: -90px;
+    left: -210px;
+    height: 694px;
+    background: radial-gradient(circle at center, rgba(200, 255, 130, 0.5), transparent 40%);
+  }
+}

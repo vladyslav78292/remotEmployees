@@ -1,0 +1,45 @@
+@import '../../utils/variables.scss';
+// @import '../../styles/mixins.scss';
+
+.modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+
+  &__button {
+    background-color: transparent;
+    font-size: 100px;
+    border: none;
+    top: 478px;
+    z-index: 123;
+    left: 925px;
+    display: flex;
+    position: absolute;
+  }
+}
+.modalconent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+
+.container {
+  display: flex;
+  gap: 16px;
+  max-width: 320px;
+  flex-direction: column;
+}
+
+.content {
+  width: 320px;
+}

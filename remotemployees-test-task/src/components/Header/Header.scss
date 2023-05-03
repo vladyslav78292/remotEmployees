@@ -50,6 +50,10 @@
   font-size: 14px;
   line-height: 18px;
 
+  &__list-container {
+    position: relative;
+  }
+
   &__list {
     display: flex;
     list-style-type: none;
@@ -93,5 +97,20 @@
     &-link {
       color: $dark-green-c;
     }
+  }
+
+  &__list-link--container {
+    position: absolute;
+    top: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: $white-background;
+    border-radius: 32px;
+  }
+
+  &__list-link--open {
+    padding-left: 16px;
+    width: 120px;
   }
 }
