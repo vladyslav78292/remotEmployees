@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .contact-section {
   padding-top: 120px;
@@ -8,11 +9,35 @@
   &__info-container {
     position: relative;
     top: 18px;
+    margin-bottom:  60px;
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      align-items: center;
+    }
+
+    @include onDesktop {
+      align-items: flex-start;
+    }
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include onMobile {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    @include onTablet {
+      flex-direction: column;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+    }
   }
 
   &__point {
@@ -78,9 +103,16 @@
   }
 
   &__line {
-    width: 440px;
     height: 2px;
     background-color: $light-gray-c;
+
+    @include onMobile {
+      width: 310px;
+    }
+
+    @include onTablet {
+      width: 440px;
+    }
   }
 
   &__person-data {
@@ -128,16 +160,33 @@
     border-radius: 32px;
     display: flex;
     gap: 21px;
+    white-space: nowrap;
     padding: 13px 16px 13px 21px;
     align-items: center;
     color: $white-c;
     background-color: $green-for-buttons-c;
+
+    @include onMobile {
+      padding: 13px 8px 13px 11px;
+    }
+
+    @include onTablet{
+      padding: 13px 16px 13px 21px;
+    }
   }
 
   &__images-container {
     overflow: hidden;
     padding-left: 40px;
     position: relative;
+
+    @include onMobile {
+      padding-left: 20px;
+    }
+
+    @include onTablet{
+      padding-left: 40px;
+    }
   }
 
   &__slider-images {
@@ -147,32 +196,59 @@
 
   &__image-video {
     position: absolute;
-    left: 260px;
-    top: 184px;
+
+    @include onMobile {
+      left: 160px;
+      top: 124px;
+    }
+
+    @include onTablet {
+      left: 260px;
+      top: 184px;
+    }
   }
 
   &__sofa-image {
     position: relative;
     left: -40px;
+    cursor: pointer;
+
+    @include onMobile {
+      width: 200px;
+    }
+
+    @include onDesktop{
+      width: 300px;
+    }
   }
 
   &__interior-image {
     position: relative; 
     left: -36px;
+    cursor: pointer;
     height: 80px;
 
     &--second {
       position: relative; 
       left: -36px;
+      cursor: pointer;
       margin-right: 8px;
       height: 80px;
     }
   }
 
   &__main-image {
+    cursor: pointer;
     margin-bottom: 43px;
-    width: 488px;
-    height: 416px;
+
+    @include onMobile {
+      width: 310px;
+      height: 260px;
+    }
+    @include onTablet {
+      width: 488px;
+      height: 416px;
+    }
   }
 }
 
@@ -199,21 +275,43 @@
 }
 
 .color-gradient {
-  width: 638px;
   position: absolute;
   z-index: -1;
-  bottom: -90px;
-  right: -200px;
+
   height: 694px;
   background: radial-gradient(circle at center, rgba(255, 250, 130, 1), white 60%);
+
+
+  @include onMobile {
+    width: 638px;
+    bottom: 190px;
+    right: -200px;
+  }
+
+  @include onTablet {
+    width: 638px;
+    bottom: -90px;
+    right: -200px;
+  }
 }
 
+
 .color-gradient--orange {
-  width: 738px;
   position: absolute;
   z-index: -1;
-  bottom: 90px;
-  right: -200px;
+
   height: 594px;
   background: radial-gradient(circle at center,rgba(255, 152, 130, 0.4)  , transparent 50%);
+
+  @include onMobile {
+    bottom: 90px;
+    right: -200px;
+    width: 638px;
+  }
+
+  @include onTablet {
+    bottom: 90px;
+    right: -200px;
+    width: 738px;
+  }
 }

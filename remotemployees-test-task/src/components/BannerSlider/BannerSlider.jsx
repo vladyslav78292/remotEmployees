@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import EstherFoward from "../../images/Esther.svg";
 import './BannerSlider.scss';
 import star from '../../images/star.svg';
-import { bannerSlderData } from '../../api/BannerSlider.js';
+import { bannerSlderData } from '../../api/bannerSlider.js';
 import classNames from 'classnames';
 
 export const BannerSlider = () => {
@@ -48,7 +48,7 @@ export const BannerSlider = () => {
                     <p className='slide__person-position'>{element.person_position}</p>
                   </span>
                 </span>
-                <span className={classNames('slide__rating', {'Esther': element.person_image === EstherFoward })}>
+                <span className={classNames('slide__rating', {'EstherStar': element.person_image === EstherFoward })}>
                   <img alt='star' src={star}/>
                   <p className='slide__rating-number'>{element.rating}</p>
                 </span>

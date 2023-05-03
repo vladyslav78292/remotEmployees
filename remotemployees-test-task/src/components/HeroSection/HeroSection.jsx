@@ -9,9 +9,12 @@ import tiket from '../../images/tiket.svg'
 import location from '../../images/location.svg';
 import arrowRight from '../../images/arrow-right.svg';
 import { useState } from 'react';
+import { useWindowSize } from '../../utils/helper';
 
 export const HeroSection = () => {
   const [query, setQuery] = useState('');
+
+  const windowWidth = useWindowSize().width;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,11 +24,17 @@ export const HeroSection = () => {
   return (
     <section className='hero-section grid'>
       <div className='background_gradient'></div>
-      <div className='hero-section__container grid__item--desktop-4-36'>
+      <div className='hero-section__container grid__item--desktop-4-36  grid__item--mobile-2-11 grid__item--tablet-2-11'>
         <div className='hero-section__info'>
-          <h1 className='hero-section__title'>
-            Find the place to <br></br> live <h1 className='hero-section__title hero-section__title--transparent'>Your dreams</h1> <br></br> easily here
-          </h1>
+          {windowWidth > 720 ? (
+            <h1 className='hero-section__title'>
+              Find the place to <br></br> live <h1 className='hero-section__title hero-section__title--transparent'>Your dreams</h1> <br></br> easily here
+            </h1>
+          ) : (
+            <h1 className='hero-section__title'>
+              Find the place to live <h1 className='hero-section__title hero-section__title--transparent'>Your dreams</h1> easily here
+            </h1>
+          )}
           <p className='hero-section__addictional'>Everything you need about finding your place to live will be here,<br></br> where it will be easier for you</p>
           <span className='hero-section__input-container'>
             <img 

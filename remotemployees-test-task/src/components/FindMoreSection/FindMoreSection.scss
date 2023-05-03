@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .find-more {
   display: flex;
@@ -69,6 +70,20 @@
   &__main {
     display: flex;
     justify-content: space-between;
+    @include onMobile {
+      align-items: center;
+      flex-direction: column-reverse;
+      gap: 64px;
+    }
+
+    @include onTablet {
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      align-items: start;
+      gap: 0;
+    }
   }
 
   &__house-owner {
@@ -80,6 +95,16 @@
   &__small-article {
     display: flex;
     gap: 32px;
+
+    @include onMobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include onTablet {
+      flex-direction: row;
+      align-items: start;
+    }
   }
 
   &__small-articles {
@@ -102,6 +127,15 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 32px;
+
+    @include onMobile {
+      width: 300px;
+      text-align: start;
+    }
+
+    @include onTablet {
+      width: auto;
+    }
   }
 
   &__date-info {
@@ -151,39 +185,69 @@
     margin-top: 12px;
     text-align: start;
     line-height: 24px;
-    width: 560px;
 
     @media (max-width: 1360px) {
       width: 480px;  
     }
+
+    @include onMobile {
+      width: 320px;
+    }
+
+    @include onTablet {
+      width: 560px;
+    }
   }
 
   &__big-house {
-    width: 560px;
     @media (max-width: 1360px) {
       width: 480px;  
+    }
+
+    @include onMobile {
+      align-self: center;
+      width: 320px;
+    }
+
+    @include onTablet {
+      width: 560px;
+      align-self: flex-start;
     }
   }
 }
 
 .gradient {
   &__blue {
-    width: 638px;
     position: absolute;
     z-index: -1;
     bottom: 210px;
     left: -200px;
     height: 694px;
     background: radial-gradient(circle at center, rgba(130, 255, 232, 0.5), white 60%);
+
+    @include onMobile {
+      width: 310px;
+    }
+  
+    @include onTablet {
+      width: 638px;
+    }
   }
 
   &__green {
-    width: 638px;
     position: absolute;
     z-index: -1;
     bottom: -90px;
     left: -210px;
     height: 694px;
     background: radial-gradient(circle at center, rgba(200, 255, 130, 0.5), transparent 40%);
+  }
+
+  @include onMobile {
+    width: 310px;
+  }
+
+  @include onTablet {
+    width: 638px;
   }
 }

@@ -41,8 +41,8 @@ export const Modal = ({ setIsModalOpen, modalImages }) => {
 
   return (
   <div className="modal">
-    <button className='modal__button' onClick={() => setIsModalOpen(false)}>×</button>
     <div className="modalconent">
+      <button className='modal__button' onClick={() => setIsModalOpen(false)}>×</button>
       <div className='container'>
         <div className='content'>
           <Slider ref={slider} {...settings}>

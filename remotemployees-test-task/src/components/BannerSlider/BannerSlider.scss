@@ -1,24 +1,50 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .slide {
   &__main {
     border-radius: 8px;
     margin: 0 56px;
-    width: 740px;
-    height: 400px;
+
+    @include onMobile {
+      width:  280px;
+      height: 250px;
+    }
+
+    @include onTablet {
+      width:  600px;
+      height: 400px;
+    }
+
+    @include onDesktop {
+      width: 720px;
+    }
   }
 
   &__modal {
-    width: 612px;
     display: flex;
     flex-direction: column;
     background-color: $white-c;
     gap: 24px;
     position: relative;
     bottom: 143px;
-    left: 120px;
     margin-bottom: -105px;
     border-radius: 16px;
+
+    @include onMobile {
+      width: 242px;
+      left: 75px;
+    }
+
+    @include onTablet {
+      width: 542px;
+      left: 85px;
+    }
+
+    @include onDesktop {
+      left: 120px;
+      width: 612px;
+    }
   }
 
   &__info {
@@ -30,18 +56,45 @@
   &__header {
     color: $dark-blue-c;
     font-weight: 600;
-    font-size: 20px;
     line-height: 25px;
     margin: 32px 32px 0;
     text-transform: capitalize;
+    @include onMobile {
+      width: 206px;
+      font-size: 14px;
+    }
+
+    @include onTablet {
+      font-size: 18px;
+      width: 478px;
+    }
+
+    @include onDesktop {
+      width: 548px;
+      font-size: 20px;
+    }
   }
 
   &__paragraph {
     font-weight: 400;
-    font-size: 14px;
     line-height: 24px;
     margin: 16px 32px 0;
     color: $gray-c;
+
+
+    @include onMobile {
+      width: 206px;
+      font-size: 10px;
+    }
+
+    @include onTablet {
+      font-size: 14px;
+      width: 478px;
+    }
+
+    @include onDesktop {
+      width: 548px;
+    }
   }
 
   &__feedback {
@@ -58,15 +111,29 @@
   &__person-name {
     color: $building-title-c;
     font-weight: 500;
-    font-size: 14px;
     line-height: 22px;
+
+    @include onMobile {
+      font-size: 10px;
+    }
+
+    @include onTablet {
+      font-size: 14px;
+    }
   }
 
   &__person-position {
     color: $partherships-c;
     font-weight: 500;
-    font-size: 14px;
     line-height: 22px;
+
+    @include onMobile {
+      font-size: 10px;
+    }
+
+    @include onTablet {
+      font-size: 14px;
+    }
   }
 
   &__person-container {
@@ -83,6 +150,13 @@
     display: flex;
     align-items: center;
     gap: 18px;
+    @include onMobile {
+      gap: 9px;
+    }
+
+    @include onTablet {
+      gap: 18px;
+    }
   }
 
   &__rating-number {
@@ -96,4 +170,25 @@
 .Esther {
   position: relative;
   bottom: 20px;
+
+  @include onMobile {
+    margin-left: -48px;
+    margin-right: -48px;
+  }
+
+  @include onTablet {
+    margin: 0px
+  }
+}
+
+.EstherStar {
+  @include onMobile {
+    margin-left: -8px;
+    margin-bottom: 28px;
+  }
+
+  @include onTablet {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
 }

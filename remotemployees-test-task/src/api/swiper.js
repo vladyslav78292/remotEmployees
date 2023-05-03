@@ -14,19 +14,19 @@ export const SwipeInfo = [
     image: home,
     title: '56 Houses',
     text: 'Sold Monthly',
-    width: 217
+    width: 216
 
   },
   {
     image: woman,
     title: '4K+',
     text: 'People Looking for New Home',
-    width: 312
+    width: 298
   },
   {
     image: man,
     title: 'Addictional',
     text: 'For Slider',
-    width: 227
+    width: 223
   }
 ];

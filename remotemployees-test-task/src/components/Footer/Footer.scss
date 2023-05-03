@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .footer {
   position: relative;
@@ -6,6 +7,22 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @include onMobile {
+      align-items: center;
+      gap: 16px;
+      flex-direction: column;
+    }
+
+    @include onTablet {
+      gap: 64px;
+    }
+
+    @include onDesktop {
+      align-items: start;
+      flex-direction: row;
+      gap: 0px;
+    }
   }
 
   &__logo-container {
@@ -23,8 +40,12 @@
     font-size: 14px;
     line-height: 24px;
     color: $gray-c;
-    width: 323px;
+    width: 320px;
     margin-top: 16px;
+
+    @include onDesktop {
+      width: 323px;
+    }
   }
 
   &__images-container {
@@ -38,7 +59,15 @@
 
   &__addictional {
     display: flex;
-    gap: 88px;
+    @include onMobile {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    @include onTablet {
+      gap: 88px;
+      flex-direction: row;
+    }
   }
 
   &__addictional-header {
@@ -62,22 +91,38 @@
 
 .gradient {
   &__light-green {
-    width: 772px;
     position: absolute;
     z-index: -1;
     bottom: -90px;
     right: 0px;
-    height: 894px;
     background: radial-gradient(circle at 100% 100%, rgba(130, 187, 255, 0.5), transparent 40%);
+
+    @include onMobile {
+      width: 310px;
+      height: 394px;
+    }
+
+    @include onTablet {
+      height: 894px;
+      width: 720px;
+    }
   }
 
   &__light-blue {
-    width: 772px;
     position: absolute;
     z-index: -1;
     bottom: -90px;
     right: 100px;
-    height: 794px;
     background: radial-gradient(circle at 50% 100%, rgba(185, 255, 130, 0.5), transparent 40%);
+
+    @include onMobile {
+      width: 310px;
+      height: 394px;
+    }
+
+    @include onTablet {
+      height: 894px;
+      width: 720px;
+    }
   }
 }

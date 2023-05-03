@@ -9,6 +9,7 @@ import subscribeSmallImg6 from '../../images/subscribe6image.png';
 import subscribeSmallImg7 from '../../images/subscribe7image.png';
 import subscribeSmallImg8 from '../../images/subscribe8image.png';
 import { useState } from 'react';
+import { useWindowSize } from '../../utils/helper';
 
 export const SubscribeSection = () => {
   const [query, setQuery] = useState('');
@@ -17,18 +18,25 @@ export const SubscribeSection = () => {
     event.preventDefault();
     setQuery('');
   };
+
+  const windowSize = useWindowSize().width
+  console.log(windowSize)
   return (
     <section className="subscribe grid">
-      <article className='subscribe__container-grid grid__item--desktop-4-33'>
+      <article className='subscribe__container-grid grid__item--desktop-4-33 grid__item--mobile-2-11 grid__item--tablet-2-11'>
         <span className="subscribe__container">
-          <img className='subscribe__small-image1' src={subscribeSmallImg1} alt='interier' />
-          <img className='subscribe__small-image2' src={subscribeSmallImg2} alt='person' />
-          <img className='subscribe__small-image3' src={subscribeSmallImg3} alt='person' />
-          <img className='subscribe__small-image4' src={subscribeSmallImg4} alt='villa' />
-          <img className='subscribe__small-image5' src={subscribeSmallImg5} alt='house' />
-          <img className='subscribe__small-image6' src={subscribeSmallImg6} alt='person' />
-          <img className='subscribe__small-image7' src={subscribeSmallImg7} alt='person' />
-          <img className='subscribe__small-image8' src={subscribeSmallImg8} alt='interier' />
+          {windowSize >= 1200 && (
+            <>
+              <img className='subscribe__small-image1' src={subscribeSmallImg1} alt='interier' />
+              <img className='subscribe__small-image2' src={subscribeSmallImg2} alt='person' />
+              <img className='subscribe__small-image3' src={subscribeSmallImg3} alt='person' />
+              <img className='subscribe__small-image4' src={subscribeSmallImg4} alt='villa' />
+              <img className='subscribe__small-image5' src={subscribeSmallImg5} alt='house' />
+              <img className='subscribe__small-image6' src={subscribeSmallImg6} alt='person' />
+              <img className='subscribe__small-image7' src={subscribeSmallImg7} alt='person' />
+              <img className='subscribe__small-image8' src={subscribeSmallImg8} alt='interier' />
+            </>
+          )}
           <h1 className="subscribe__title">Subscribe For More Info<br></br> and update from Hounter</h1>
           <span className='subscribe__input-container'>
             <img 

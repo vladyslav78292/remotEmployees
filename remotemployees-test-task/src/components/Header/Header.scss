@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .header {
   position: absolute;
@@ -7,14 +8,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include onMobile {
+      margin-bottom: 32px;
+
+    }
   }
 
   &__nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 56px;
     justify-content: center;
+
+    @include onDesktop {
+      gap: 56px;
+    }
+
+    @include onMobile {
+      gap: 24px,
+    }
   }
 
   &-menu {
@@ -57,13 +69,31 @@
   &__list {
     display: flex;
     list-style-type: none;
-    gap: 24px;
+
+    @include onMobile {
+      justify-content: space-evenly;
+      gap: 8px;
+    }
+
+    @include onTablet {
+      gap: 24px;
+    }
 
     &-element {
       border-radius: 50px;
       padding: 8px 16px;
-      background-color: $white-background;
       border: 1px solid $white-c;
+
+      @include onMobile {
+        background-color: orange;
+        white-space: nowrap;
+        opacity: 0.3;
+      }
+
+      @include onDesktop {
+        background-color: $white-background;
+        opacity: 1;
+      }
 
       &--burger-menu-button {
         display: flex;
@@ -85,6 +115,14 @@
 
     &-link {
       color: $white-c;
+
+      @include onMobile {
+        font-size: 15px;
+      }
+
+      @include onTablet {
+        font-size: 16px;
+      }
     }
   }
 
@@ -93,6 +131,11 @@
     border-radius: 50px;
     line-height: 22px;
     background-color: $light-green-background;
+    white-space: nowrap;
+
+    @include onDesktop {
+      width: auto;
+    }
 
     &-link {
       color: $dark-green-c;

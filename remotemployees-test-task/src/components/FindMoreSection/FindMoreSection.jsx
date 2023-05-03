@@ -24,7 +24,7 @@ export const FindMoreSection = () => {
       <div className='grid find-more__container'>
         <div className='gradient__blue'></div>
         <div className='gradient__green'></div>
-        <main className='grid__item--desktop-4-33 find-more__main'>
+        <main className='grid__item--desktop-4-33 grid__item--tablet-2-11 grid__item--mobile-2-11 find-more__main'>
           <article className="find-more__small-articles">
             {findMoreData.map(element => (
               <article className="find-more__small-article">
