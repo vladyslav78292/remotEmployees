@@ -1,0 +1,219 @@
+@import '../../utils/variables.scss';
+
+.contact-section {
+  padding-top: 120px;
+  position: relative;
+  overflow: hidden;
+
+  &__info-container {
+    position: relative;
+    top: 18px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__point {
+    display: flex;
+    gap: 8px;
+    color: $yellow-c;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    color: $dark-blue-c;
+    line-height: 40px;
+    margin-top: 12px;
+    text-transform: capitalize;
+  }
+
+  &__addictional {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $gray-c;
+    margin-top: 16px;
+  }
+
+  &__details {
+    font-weight: 600;
+    font-size: 16px;
+    color: $dark-blue-c;
+    line-height: 28px;
+    margin-top: 16px;
+
+    &-info {
+      display: flex;
+      gap: 56px;
+      margin-top: 22px;
+    }
+  }
+
+  &__details-info-first-paragraph {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $dark-blue-button-c;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__details-info-container {
+    display: flex;
+    gap: 26px;
+    flex-direction: column;
+  }
+
+  &__person-container {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__line {
+    width: 440px;
+    height: 2px;
+    background-color: $light-gray-c;
+  }
+
+  &__person-data {
+    margin-top: 32px;
+    display: flex;
+  }
+
+  &__person-info {
+    margin-left: 24px;
+    margin-right: 59px;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+
+    @media (max-width: 1250px) {
+      margin-left: 12px;
+      margin-right: 39px;
+    }
+  }
+
+  &__person-position {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $partherships-c;
+  }
+
+  &__person-name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $building-title-c;
+  }
+
+  &__modal-button {
+    border: none;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  &__person-phone {
+    border-radius: 32px;
+    display: flex;
+    gap: 21px;
+    padding: 13px 16px 13px 21px;
+    align-items: center;
+    color: $white-c;
+    background-color: $green-for-buttons-c;
+  }
+
+  &__images-container {
+    overflow: hidden;
+    padding-left: 40px;
+    position: relative;
+  }
+
+  &__slider-images {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  &__image-video {
+    position: absolute;
+    left: 260px;
+    top: 184px;
+  }
+
+  &__sofa-image {
+    position: relative;
+    left: -40px;
+  }
+
+  &__interior-image {
+    position: relative; 
+    left: -36px;
+    height: 80px;
+
+    &--second {
+      position: relative; 
+      left: -36px;
+      margin-right: 8px;
+      height: 80px;
+    }
+  }
+
+  &__main-image {
+    margin-bottom: 43px;
+    width: 488px;
+    height: 416px;
+  }
+}
+
+.card {
+  &__element {
+    background-color: $white-c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+
+  &__image {
+    position: relative;
+    top: 10px;
+    margin: 0 -12px;
+  }
+
+  &__slider-images {
+    display: flex;
+  }
+}
+
+.color-gradient {
+  width: 638px;
+  position: absolute;
+  z-index: -1;
+  bottom: -90px;
+  right: -200px;
+  height: 694px;
+  background: radial-gradient(circle at center, rgba(255, 250, 130, 1), white 60%);
+}
+
+.color-gradient--orange {
+  width: 738px;
+  position: absolute;
+  z-index: -1;
+  bottom: 90px;
+  right: -200px;
+  height: 594px;
+  background: radial-gradient(circle at center,rgba(255, 152, 130, 0.4)  , transparent 50%);
+}

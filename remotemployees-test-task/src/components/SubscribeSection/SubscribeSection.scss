@@ -1,0 +1,131 @@
+@import '../../utils/variables.scss';
+
+.subscribe {
+  &__container-grid {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 496px;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: 312px;
+    background: linear-gradient(135deg, rgba(45, 114, 218, 0.3) 25%,rgba(183, 184, 180, 0.3), rgba(45, 114, 218, 0.3));
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: $dark-blue-c;
+    line-height: 48px;
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+
+  &__input {
+    border: 0;
+    width: 210px;
+    outline: 0;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      border: 0;
+      color: white;
+      height: 48px;
+      padding: 0 16px;
+      outline: 0;
+      background-color: $green-for-buttons-c;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  }
+
+  &__email-img {
+    margin: 19px 18px 19px 26px;
+  }
+
+  &___input-button {
+    color: $white-c;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__input-container {
+    border: 1px solid $gray-border-c;
+    display: flex;
+    padding: 0;
+    outline: none;
+    border-radius: 50px;
+    background-color: $white-c;
+    width: 41.667%;
+    height: 56px;
+  }
+
+  &__small-image1 {
+    position: absolute;
+    left: 46px;
+    top: 40px;
+  }
+
+  &__small-image2 {
+    position: absolute;
+    left: 37px;
+    top: 151px;
+  }
+
+  &__small-image3 {
+    position: absolute;
+    left: 174px;
+    top: 49px;
+  }
+
+  &__small-image4 {
+    position: absolute;
+    left: 197px;
+    top: 180px;
+  }
+
+  &__small-image5 {
+    position: absolute;
+    right: 202px;
+    top: 46px;
+  }
+
+  &__small-image6 {
+    position: absolute;
+    right: 170px;
+    top: 121px;
+  }
+
+  &__small-image7 {
+    position: absolute;
+    right: 52px;
+    top: 85px;
+  }
+
+  &__small-image8 {
+    position: absolute;
+    right: 75px;
+    top: 199px;
+  }
+}

@@ -1,74 +1,52 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useRef, useEffect } from "react";
-import people from "../../images/3people.svg";
-import './HeroSectionSwiper.scss';
-import { SwipeCard } from "../SwipeCard";
+import "./HeroSectionSwiper.scss";
+import { SwipeInfo } from "../../api/swiper.js";
+import classnames from 'classnames';
 
 export const HeroSectionSwiper = () => {
   const containerRef = useRef(null);
-  const [isSwiping, setIsSwiping] = useState(false);
-  const [startX, setStartX] = useState(null);
-  const [currentX, setCurrentX] = useState(0);
-  const [clipPathValue, setClipPathValue] = useState(null);
+  const [cards, setCards] = useState(SwipeInfo);
+  const [left, setLeft] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    const container = containerRef.current;
+    const intervalId = setInterval(() => {
+      setLeft((prevLeft) => prevLeft + cards[counter].width);
+      setCards((prevCards) => [...prevCards, prevCards[counter]]);
+      setCounter((prevCount) => prevCount + 1);
+    }, 3000);
 
-    const handleTouchStart = (e) => {
-      setIsSwiping(true);
-      setStartX(e.touches[0].clientX);
-    };
-
-    const handleTouchMove = (e) => {
-      if (!isSwiping) return;
-      const diff = e.touches[0].clientX - startX;
-      setCurrentX(diff < 0 ? Math.max(-1000, diff) : Math.min(1000, diff));
-      if (currentX < -100) {
-        setClipPathValue(
-          `inset(0px 0px 0px ${currentX * -1 - 100}px)`
-        );
-      } else if (currentX > 0) {
-        setClipPathValue(
-          `inset(0px ${currentX}px 0px 0px)`
-        );
-      } else {
-        setClipPathValue(null);
-      }
-    };
-
-    const handleTouchEnd = () => {
-      setIsSwiping(false);
-      setStartX(null);
-      setCurrentX(0);
-      setClipPathValue(
-        `inset(0px 0px 0px 0px)`
-      );
-    };
-
-    container.addEventListener("touchstart", handleTouchStart);
-    container.addEventListener("touchmove", handleTouchMove);
-    container.addEventListener("touchend", handleTouchEnd);
-
-    return () => {
-      container.removeEventListener("touchstart", handleTouchStart);
-      container.removeEventListener("touchmove", handleTouchMove);
-      container.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, [isSwiping, startX, currentX]);
+    return () => clearInterval(intervalId);
+  }, [cards, counter]);
 
   return (
     <div
+      id="swiper"
       className="swiper"
       ref={containerRef}
       style={{
         marginLeft: "600px",
         display: "flex",
-        transform: `translateX(${currentX}px)`,
-        transition: isSwiping ? "none" : "transform 0.3s",
-        clipPath: clipPathValue,
+        transform: `translateX(-${left}px)`,
+        transition: "transform 0.5s",
       }}
     >
-      <SwipeCard />
+      {cards.map((element) => (
+        <span className="card__element" id={element.title}>
+          <img
+            className={classnames({
+              "card__image": element.title !== "56 Houses" }, {
+              "card__image--home": element.title === "56 Houses",
+            })}
+            src={element.image}
+            alt="people"
+          />
+          <span className="card__text-container">
+            <p className="card__text-top">{element.title}</p>
+            <p className="card__text-bottom">{element.text}</p>
+          </span>
+        </span>
+      ))}
     </div>
   );
 };

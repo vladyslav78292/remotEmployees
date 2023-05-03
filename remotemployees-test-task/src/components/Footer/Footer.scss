@@ -1,0 +1,83 @@
+@import '../../utils/variables.scss';
+
+.footer {
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    color: $dark-blue-c;
+    line-height: 20px;
+  }
+
+  &__logo-paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray-c;
+    width: 323px;
+    margin-top: 16px;
+  }
+
+  &__images-container {
+    margin-top: 32px;
+  }
+
+  &__image-container--twitter {
+    margin-left: 38px;
+    margin-right: 34px;
+  }
+
+  &__addictional {
+    display: flex;
+    gap: 88px;
+  }
+
+  &__addictional-header {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: $building-title-c;
+  }
+
+  &__addictional-paragraphs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $partherships-c;
+  }
+}
+
+.gradient {
+  &__light-green {
+    width: 772px;
+    position: absolute;
+    z-index: -1;
+    bottom: -90px;
+    right: 0px;
+    height: 894px;
+    background: radial-gradient(circle at 100% 100%, rgba(130, 187, 255, 0.5), transparent 40%);
+  }
+
+  &__light-blue {
+    width: 772px;
+    position: absolute;
+    z-index: -1;
+    bottom: -90px;
+    right: 100px;
+    height: 794px;
+    background: radial-gradient(circle at 50% 100%, rgba(185, 255, 130, 0.5), transparent 40%);
+  }
+}
