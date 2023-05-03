@@ -15,11 +15,12 @@
     background-color: transparent;
     font-size: 100px;
     border: none;
-    top: 478px;
+    top: -48px;
     z-index: 123;
-    left: 925px;
+    left: 315px;
     display: flex;
-    position: absolute;
+    position: fixed;
+
   }
 }
 .modalconent {
@@ -30,6 +31,7 @@
   background: #fff;
   padding: 15px;
   border-radius: 15px;
+  position: absolute;
 }
 
 

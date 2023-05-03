@@ -1,11 +1,29 @@
 @import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
 
 .hero-section {
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+
+    @include onMobile {
+      flex-direction: column-reverse;
+      margin-top: 180px;
+      gap: 48px;
+    }
+
+    @include onTablet {
+      flex-direction: column-reverse;
+      margin-top: 120px;
+      gap: 48px;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      margin-top: 0;
+      gap: 20px;
+    }
   }
 
   &__location-img {
@@ -15,6 +33,22 @@
 
     @media (max-width: 1250px) {
       margin: 17px 13px 17px 20px;  
+    }
+  }
+
+  &__main-page-image {
+    @include onMobile{
+      width: 300px;
+    }
+
+    @include onTablet {
+      width: 670px;
+      border-radius: 32px;
+    }
+
+    @include onDesktop {
+      width: 720px;
+      border-radius: 0px;
     }
   }
 
@@ -28,8 +62,15 @@
 
   &__input {
     border: 0;
-    width: 210px;
     outline: 0;
+
+    @include onMobile {
+      width: 165px;
+    }
+
+    @include onTablet {
+      width: 210px;
+    }
 
     &-button {
       display: flex;
@@ -46,9 +87,15 @@
     }
 
     &::placeholder {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 22px;
+
+      @include onMobile {
+        font-size: 11px;
+      }
+      @include onTablet {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+      }
     }
   }
 
@@ -71,6 +118,15 @@
     line-height: 50px;
     color: $dark-blue-c;
     text-transform: capitalize;
+
+    @include onMobile{
+      text-align: center;
+    }
+
+    @include onDesktop {
+      text-align: inherit
+    }
+
 
     &--transparent {
       display: inline-block;
@@ -98,6 +154,16 @@
     margin-top: 32px;
   }
 
+  &__partner {
+    @include onMobile {
+      width: 75px;
+    }
+
+    @include onTablet {
+      width: auto;
+    }
+  }
+
   &__partners {
     display: flex;
     align-items: center;
@@ -105,14 +171,32 @@
   }
 
   &__main-page-image__container {
-    width: 720px;
-    height: 720px;
+    @include onMobile {
+      width: 300px;
+      height: 270px;
+    }
+
+    @include onTablet {
+      width: 670px;
+      height: 670px;
+    }
+
+    @include onDesktop {
+      width: 720px;
+      height: 720px;
+    }
     overflow: hidden;
   }
 }
 
 .background_gradient {
-  width: 750px;
+  @include onMobile {
+    width: 300px;
+  }
+
+  @include onTablet {
+    width: 710px;
+  }
   position: absolute;
   z-index: -1;
   height: 424px;

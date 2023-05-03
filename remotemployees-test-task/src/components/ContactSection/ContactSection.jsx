@@ -45,7 +45,7 @@ export const ContactSection = ({ setModalImages, modalImages, setIsModalOpen }) 
     <section className="contact contact-section grid">
       <div className='color-gradient'></div>
       <div className='color-gradient--orange'></div>
-      <span className="contact-section__container grid__item--desktop-5-33">
+      <span className="contact-section__container grid__item--mobile-2-11  grid__item--tablet-2-11 grid__item--desktop-5-33">
         <span className="contact-section__info-container">
           <p  className='contact-section__point'><img className='contact-section__point-image' alt='line' src={line}/>Ready To Sell!</p>
           <h2 className="contact-section__title">Let’s tour and see our house!</h2>

@@ -9,7 +9,7 @@ export const Footer = () => (
   <footer className="footer grid">
     <div className='gradient__light-green'></div>
     <div className='gradient__light-blue'></div>
-    <section className="footer__container grid__item--desktop-4-33">
+    <section className="footer__container grid__item--tablet-2-11  grid__item--mobile-2-11 grid__item--desktop-4-33">
       <section className='footer__main'>
         <span className='footer__logo-container'>
           <a href='/' className='footer__logo-link'>
