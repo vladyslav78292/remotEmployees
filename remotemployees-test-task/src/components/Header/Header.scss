@@ -89,11 +89,10 @@
         white-space: nowrap;
         opacity: 0.3;
       }
-      @include onTablet {
-      }
 
       @include onDesktop {
         background-color: $white-background;
+        opacity: 1;
       }
 
       &--burger-menu-button {
