@@ -75,6 +75,11 @@
       background-color: $green-for-buttons-c;
       border-radius: 50px;
       cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: orange;
+      }
 
       @include onMobile {
         padding: 0 8px;
