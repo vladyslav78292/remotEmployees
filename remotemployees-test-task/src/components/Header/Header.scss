@@ -148,8 +148,17 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background-color: $white-background;
     border-radius: 32px;
+
+    @include onMobile {
+      background-color: orange;
+      opacity: 0.3;
+    }
+
+    @include onTablet {
+      background-color: $white-background;
+      opacity: 1;
+    }
   }
 
   &__list-link--open {

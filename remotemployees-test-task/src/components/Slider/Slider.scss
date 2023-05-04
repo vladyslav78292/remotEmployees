@@ -219,6 +219,14 @@
       font-size: 18px;
       line-height: 24px;
       color: $building-title-c;
+
+      @include  onMobile {
+        width: max-content;
+      }
+
+      @include onTablet {
+        width: auto;
+      }
     }
 
     &-location {
@@ -226,6 +234,14 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 22px;
+
+      @include onMobile {
+        width: max-content;
+      }
+  
+      @include onTablet {
+        width: auto;
+      }
     }
   }
 
@@ -238,12 +254,11 @@
     position: absolute;
 
     @include onMobile {
-      bottom: 305px;
+      bottom: 190px;
       left: 16px;
     }
 
     @include onTablet {
-      bottom: 190px;
       left: 16px;
     }
 

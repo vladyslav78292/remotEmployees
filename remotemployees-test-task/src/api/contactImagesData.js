@@ -23,3 +23,24 @@ export const concactImagesData = [
     image_number: 3,
   },
 ];
+
+export const concactImagesDataMobile = [
+  {
+    image: sofa,
+    width: 212,
+    className: 'contact-section__sofa-image',
+    image_number: 1,
+  },
+  {
+    image: interior1,
+    width: 68,
+    className: 'contact-section__interior-image',
+    image_number: 2,
+  },
+  {
+    image: interior2,
+    width: 70,
+    className: 'contact-section__interior-image--second',
+    image_number: 3,
+  },
+];

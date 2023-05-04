@@ -164,7 +164,7 @@ export const Slider = () => {
           </div>
         </span>
       </span>
-      <div className="slider__cards grid__item--desktop-5-36  grid__item--mobile-1-12 grid__item--tablet-2-12">
+      <div className="slider__cards grid__item--desktop-5-36  grid__item--mobile-2-12 grid__item--tablet-2-12">
           {filteredBuildings.map((building) => {
             return (
               <div

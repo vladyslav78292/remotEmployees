@@ -27,9 +27,9 @@ export const ContactSection = ({ setModalImages, modalImages, setIsModalOpen }) 
 
     if (!isHover) {
       intervalId = setInterval(() => {
-        setLeft((prevLeft) => prevLeft + images[counter].width);
-        setImages((prevCards) => [...prevCards, prevCards[counter]]);
         setCounter((prevCount) => prevCount + 1);
+        setImages((prevCards) => [...prevCards, prevCards[counter]]);
+        setLeft((prevLeft) => prevLeft + images[counter].width);
       }, 5000);
     }
     else {
